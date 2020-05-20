@@ -11,15 +11,21 @@ public class PlayerController : MonoBehaviour
     
     public float speed;
     public float flySpeed;
+    public LayerMask ground;
 
+    Animator animator;
+    Collider2D coll;
+    
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        coll = GetComponent<CircleCollider2D>();
     }
 
     void FixedUpdate()
     {
         Movement();
+        AnimatorSet();
     }
 
     void Movement()
@@ -38,4 +44,23 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, flySpeed);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("collection"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
+    void AnimatorSet()
+    {
+        animator.SetFloat("horizontal_speed",Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("vertical_speed", rb.velocity.y);
+        if (coll.IsTouchingLayers(ground))
+            animator.SetBool("on_floor", true);
+        else
+            animator.SetBool("on_floor", false);
+    }
+
 }
