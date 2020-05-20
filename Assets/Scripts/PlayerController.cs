@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
-
+    
     public float speed;
     public float flySpeed;
 
@@ -26,12 +26,16 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalMove = Input.GetAxis("Horizontal");
         float faceDirection = Input.GetAxisRaw("Horizontal");
-        float fly = Input.GetAxisRaw("Vertical");
+        bool fly = Input.GetButton("Jump");
 
         if (faceDirection != 0)
         {
             transform.localScale = new Vector3(faceDirection,1,1);
+            rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
         }
-        rb.velocity = new Vector2(horizontalMove * speed, fly * flySpeed);
+        if (fly)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, flySpeed);
+        }
     }
 }
