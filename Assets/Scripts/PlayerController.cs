@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public float flySpeed;
+    /*加入持有樱桃计数*/
+    public int Cherrycount;
+    public Text Cherrynum;
+    /*加入生命值计数*/
+    public int lifevalue;
+
 
     void Start()
     {
@@ -33,5 +40,17 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(faceDirection,1,1);
         }
         rb.velocity = new Vector2(horizontalMove * speed, fly * flySpeed);
+    }
+
+
+    /*与樱桃碰撞触发效果*/
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Collection")
+        {
+            Destroy(collision.gameObject);
+            Cherrycount += 1;
+            Cherrynum.text = Cherrycount.ToString();
+        }
     }
 }
