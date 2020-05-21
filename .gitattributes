@@ -1,0 +1,6 @@
+* text=auto
+# keep lf on unity files
+*.asset text
+*.meta text
+*.prefab text
+*.unity tex
