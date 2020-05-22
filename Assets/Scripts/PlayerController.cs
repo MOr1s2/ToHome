@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public int Cherrycount;
     public Text Cherrynum;
     /*加入生命值计数*/
-    public int lifevalue;
+
     public LayerMask ground;
 
     Animator animator;
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     /*与樱桃碰撞触发效果*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Collection")
+        if(collision.tag == "CherryCollection")
         {
             Destroy(collision.gameObject);
             Cherrycount += 1;

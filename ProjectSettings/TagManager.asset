@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Collection
   - Ground
+  - CherryCollection
+  - HeartCollection
   layers:
   - Default
   - TransparentFX
