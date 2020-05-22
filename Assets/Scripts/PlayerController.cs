@@ -65,8 +65,8 @@ public class PlayerController : MonoBehaviour
 
     void AnimatorSet()
     {
-        animator.SetFloat("horizontal_speed",Mathf.Abs(rb.velocity.x));
-        animator.SetFloat("vertical_speed", rb.velocity.y);
+        animator.SetFloat("horizontal_speed", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("vertical_speed", Mathf.Abs(rb.velocity.y));
         if (coll.IsTouchingLayers(ground))
             animator.SetBool("on_floor", true);
         else
