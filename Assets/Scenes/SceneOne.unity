@@ -262,8 +262,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &82351118
-TilemapCollider2D:
+--- !u!61 &82351118
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -275,9 +275,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &82351119
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -712,7 +722,7 @@ GameObject:
   - component: {fileID: 100065876}
   - component: {fileID: 100065879}
   - component: {fileID: 100065878}
-  - component: {fileID: 100065877}
+  - component: {fileID: 100065880}
   m_Layer: 8
   m_Name: Shortground
   m_TagString: Untagged
@@ -734,22 +744,6 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &100065877
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100065875}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
 --- !u!483693784 &100065878
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -1173,6 +1167,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &100065880
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100065875}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!1 &141898930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,8 +1226,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &141898932
-TilemapCollider2D:
+--- !u!61 &141898932
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1219,9 +1239,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &141898933
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -1740,8 +1770,8 @@ Transform:
   m_Father: {fileID: 1861844931}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &318942006
-TilemapCollider2D:
+--- !u!61 &318942006
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1753,9 +1783,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!483693784 &318942007
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -2716,8 +2756,8 @@ Transform:
   m_Father: {fileID: 1861844931}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &361052690
-TilemapCollider2D:
+--- !u!61 &361052690
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2729,9 +2769,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!483693784 &361052691
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -3692,8 +3742,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &363036104
-TilemapCollider2D:
+--- !u!61 &363036104
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3705,9 +3755,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &363036105
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -4197,8 +4257,8 @@ Transform:
   m_Father: {fileID: 1861844931}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &386387026
-TilemapCollider2D:
+--- !u!61 &386387026
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4210,9 +4270,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!483693784 &386387027
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -5254,8 +5324,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &512570253
-TilemapCollider2D:
+--- !u!61 &512570253
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5267,9 +5337,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &512570254
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -5781,7 +5861,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15.21
+  orthographic size: 11.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5805,7 +5885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.169999, y: -2.4100006, z: -10.293622}
+  m_LocalPosition: {x: -6.1699996, y: -2.4100003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5875,8 +5955,8 @@ Transform:
   m_Father: {fileID: 1861844931}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &556099407
-TilemapCollider2D:
+--- !u!61 &556099407
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5888,9 +5968,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!483693784 &556099408
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -6830,6 +6920,7 @@ GameObject:
   - component: {fileID: 586654196}
   - component: {fileID: 586654195}
   - component: {fileID: 586654197}
+  - component: {fileID: 586654198}
   m_Layer: 8
   m_Name: LongGround
   m_TagString: Untagged
@@ -7785,7 +7876,7 @@ TilemapCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586654193}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -7794,6 +7885,32 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!61 &586654198
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586654193}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!1 &737306912
 GameObject:
   m_ObjectHideFlags: 0
@@ -7827,8 +7944,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &737306914
-TilemapCollider2D:
+--- !u!61 &737306914
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7840,9 +7957,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &737306915
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -8299,8 +8426,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &784522201
-TilemapCollider2D:
+--- !u!61 &784522201
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8312,9 +8439,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &784522202
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -8837,8 +8974,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &947851520
-TilemapCollider2D:
+--- !u!61 &947851520
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8850,9 +8987,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &947851521
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -9417,8 +9564,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1040058946
-TilemapCollider2D:
+--- !u!61 &1040058946
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9430,9 +9577,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &1040058947
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -9896,7 +10053,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1629577975}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 15.21
+    OrthographicSize: 11.4
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -9917,7 +10074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056504898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.169999, y: -2.4100006, z: -10.293622}
+  m_LocalPosition: {x: -6.1699996, y: -2.4100003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1301796978}
@@ -10298,8 +10455,8 @@ Transform:
   m_Father: {fileID: 1861844931}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1203460303
-TilemapCollider2D:
+--- !u!61 &1203460303
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10311,9 +10468,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!483693784 &1203460304
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -11274,8 +11441,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1208340942
-TilemapCollider2D:
+--- !u!61 &1208340942
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11287,9 +11454,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &1208340943
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -11746,8 +11923,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1219873884
-TilemapCollider2D:
+--- !u!61 &1219873884
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11759,9 +11936,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &1219873885
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -12205,7 +12392,7 @@ PrefabInstance:
     - target: {fileID: 4402410631502197844, guid: 0903276a69f7fda4586a22c5cc932720,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.29362208
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4402410631502197844, guid: 0903276a69f7fda4586a22c5cc932720,
         type: 3}
@@ -12247,15 +12434,85 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197845, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -158581967
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197845, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4402410631502197846, guid: 0903276a69f7fda4586a22c5cc932720,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197848, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06401807
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197848, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.2962496
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197848, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.32223752
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197848, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4402410631502197849, guid: 0903276a69f7fda4586a22c5cc932720,
         type: 3}
       propertyPath: ground.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197849, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: Cherrynum
+      value: 
+      objectReference: {fileID: 1421996526}
+    - target: {fileID: 4402410631502197849, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197850, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197851, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.10270953
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197851, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5459714
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197851, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197851, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.12627232
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402410631502197851, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.9413192
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0903276a69f7fda4586a22c5cc932720, type: 3}
@@ -12377,8 +12634,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1393007538
-TilemapCollider2D:
+--- !u!61 &1393007538
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12390,9 +12647,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &1393007539
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -12849,8 +13116,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1400543715
-TilemapCollider2D:
+--- !u!61 &1400543715
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12862,9 +13129,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &1400543716
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -13288,6 +13565,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1421996526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2501412508763504159, guid: 1aafbdb96d2768747a79ce91381522f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2501412507404832656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1435786024
 GameObject:
   m_ObjectHideFlags: 0
@@ -33471,8 +33760,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1462455577
-TilemapCollider2D:
+--- !u!61 &1462455577
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -33484,9 +33773,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &1462455578
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -33943,8 +34242,8 @@ Transform:
   m_Father: {fileID: 1861844931}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1562902096
-TilemapCollider2D:
+--- !u!61 &1562902096
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -33956,9 +34255,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!483693784 &1562902097
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -34919,8 +35228,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1601023833
-TilemapCollider2D:
+--- !u!61 &1601023833
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -34932,9 +35241,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &1601023834
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -35397,8 +35716,8 @@ Transform:
   m_Father: {fileID: 1861844931}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1692973098
-TilemapCollider2D:
+--- !u!61 &1692973098
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -35410,9 +35729,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!483693784 &1692973099
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -36373,8 +36702,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1706287752
-TilemapCollider2D:
+--- !u!61 &1706287752
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -36386,9 +36715,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &1706287753
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -37200,8 +37539,8 @@ Transform:
   m_Father: {fileID: 1861844931}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1922578056
-TilemapCollider2D:
+--- !u!61 &1922578056
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -37213,9 +37552,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!483693784 &1922578057
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -38208,8 +38557,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &1989220475
-TilemapCollider2D:
+--- !u!61 &1989220475
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -38221,9 +38570,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &1989220476
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -38680,8 +39039,8 @@ Transform:
   m_Father: {fileID: 1861844931}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &2012365626
-TilemapCollider2D:
+--- !u!61 &2012365626
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -38693,9 +39052,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: 48.023003, y: 18.818901}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 44.533997, y: 1.962532}
+  m_EdgeRadius: 0
 --- !u!483693784 &2012365627
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -39656,8 +40025,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &2039817109
-TilemapCollider2D:
+--- !u!61 &2039817109
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -39669,9 +40038,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &2039817110
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -40267,8 +40646,8 @@ Transform:
   m_Father: {fileID: 144174305}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!19719996 &2144892718
-TilemapCollider2D:
+--- !u!61 &2144892718
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -40280,9 +40659,19 @@ TilemapCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_Offset: {x: -2.4717727, y: -3.9652967}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16.836456, y: 1.9694061}
+  m_EdgeRadius: 0
 --- !u!483693784 &2144892719
 TilemapRenderer:
   m_ObjectHideFlags: 0
