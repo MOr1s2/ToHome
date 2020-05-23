@@ -12,13 +12,12 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public float flySpeed;
+    public float hurtTime;
     /*加入持有樱桃计数和生命值计数*/
     public int Cherrycount;
     
     public int HealthValue;
     public int MaxHealthValue;
-
-    public bool isHurt;//默认是未受伤
 
     /*加入收集樱桃音效*/
     public AudioSource cherryCollectionAudio;
@@ -45,7 +44,7 @@ public class PlayerController : MonoBehaviour
     {
         Cherrynum.text = Cherrycount.ToString();
         Healthnum.text = HealthValue.ToString();
-        if (!isHurt)//受伤了停止当前运动，切换到击退效果
+        if (!animator.GetBool("is_hurt"))//受伤了停止当前运动，切换到击退效果
         {
             Movement();
         }
@@ -101,16 +100,16 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("horizontal_speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("vertical_speed", Mathf.Abs(rb.velocity.y));
         if (coll.IsTouchingLayers(ground))
-            animator.SetBool("on_floor", true);
-        else
-            animator.SetBool("on_floor", false);
-        if (isHurt)
         {
-            if (Mathf.Abs(rb.velocity.x) < 0.1f)
-            {
-                isHurt = false;
-
-            }
+            animator.SetBool("on_floor", true);
+        }
+        else
+        {
+            animator.SetBool("on_floor", false);
+        }
+        if (animator.GetBool("is_hurt") && Time.timeSinceLevelLoad - hurtTime > animator.GetFloat("lastHurtTime"))
+        {
+            animator.SetBool("is_hurt", false);
         }
     }
 
@@ -121,16 +120,20 @@ public class PlayerController : MonoBehaviour
             if (animator.GetBool("on_floor") == false)
             {
                 rb.velocity = new Vector2(rb.velocity.x, flySpeed);
+                animator.SetBool("is_hurt", true);
+                animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
             }
             else if (transform.position.x < collision.gameObject.transform.position.x)
             {
                 rb.velocity = new Vector2(-10, rb.velocity.y);
-                isHurt = true;
+                animator.SetBool("is_hurt", true);
+                animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
             }
             else if (transform.position.x > collision.gameObject.transform.position.x)
             {
                 rb.velocity = new Vector2(10, rb.velocity.y);
-                isHurt = true;
+                animator.SetBool("is_hurt", true);
+                animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
             }
             HealthValue -= 1;
         }

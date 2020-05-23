@@ -6,13 +6,14 @@ public class CollimationController : MonoBehaviour
 {
     public Transform playerTrans; 
     public float randomRange;
-
+    public float aimInterval;
+    public bool fixedCollimation;
     float lastAimTime = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        fixedCollimation = false;
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class CollimationController : MonoBehaviour
 
     private void Aim()
     {
-        if (Time.timeSinceLevelLoad - 0.2 > lastAimTime)
+        if (!fixedCollimation && Time.timeSinceLevelLoad - aimInterval > lastAimTime)
         {
             float offsetX = Random.Range(-randomRange, randomRange);
             float offsetY = Random.Range(-randomRange, randomRange);
