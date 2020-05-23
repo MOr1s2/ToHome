@@ -5,17 +5,26 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+
+    public Rigidbody2D rb;
     public int HealthValue;
     public int MaxHealthValue;
+    /*UI显示生命值文本*/
     public Text Healthnum;
+    
+ 
 
 
-    /*加入收集爱心效果*/
+    /*加入收集爱心音效*/
     public AudioSource collectionAudio;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        
+        
         HealthValue = MaxHealthValue;
         Healthnum.text = HealthValue.ToString();
     }
@@ -26,6 +35,7 @@ public class Health : MonoBehaviour
         
     }
 
+    /*收集爱心恢复生命*/
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("HeartCollection")){
@@ -42,4 +52,6 @@ public class Health : MonoBehaviour
             Healthnum.text = HealthValue.ToString();
         }
     }
+
+
 }

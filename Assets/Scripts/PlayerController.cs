@@ -12,13 +12,22 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public float flySpeed;
-    /*加入持有樱桃计数*/
+    /*加入持有樱桃计数和生命值计数*/
     public int Cherrycount;
-    public Text Cherrynum;
+    
+    public int HealthValue;
+    public int MaxHealthValue;
 
+    public bool isHurt;//默认是未受伤
 
     /*加入收集樱桃音效*/
-    public AudioSource collectionAudio;
+    public AudioSource cherryCollectionAudio;
+    public AudioSource heartCollectionAudio;
+
+    /*UI显示樱桃数和生命值文本*/
+    public Text Healthnum;
+    public Text Cherrynum;
+
 
     public LayerMask ground;
 
@@ -27,13 +36,19 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        HealthValue = MaxHealthValue;
         animator = GetComponent<Animator>();
         coll = GetComponent<CircleCollider2D>();  
     }
 
     void FixedUpdate()
     {
-        Movement();
+        Cherrynum.text = Cherrycount.ToString();
+        Healthnum.text = HealthValue.ToString();
+        if (!isHurt)//受伤了停止当前运动，切换到击退效果
+        {
+            Movement();
+        }
         AnimatorSet();
     }
 
@@ -60,10 +75,24 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.tag == "CherryCollection")
         {
-            collectionAudio.Play();
+            cherryCollectionAudio.Play();
             Destroy(collision.gameObject);
             Cherrycount += 1;
-            Cherrynum.text = Cherrycount.ToString();
+           
+        }
+        if (collision.CompareTag("HeartCollection"))
+        {
+            heartCollectionAudio.Play();
+            Destroy(collision.gameObject);
+            if (HealthValue < MaxHealthValue)
+            {
+                HealthValue += 2;
+                if (HealthValue > MaxHealthValue)
+                {
+                    HealthValue = MaxHealthValue;
+                }
+            }
+            
         }
     }
 
@@ -75,5 +104,39 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("on_floor", true);
         else
             animator.SetBool("on_floor", false);
+        if (isHurt)
+        {
+            if (Mathf.Abs(rb.velocity.x) < 0.1f)
+            {
+                isHurt = false;
+
+            }
+        }
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)//与陷阱碰撞触发效果
+    {
+        if (collision.gameObject.tag == "spike")
+        {
+            if (animator.GetBool("on_floor") == false)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, flySpeed);
+            }
+            else if (transform.position.x < collision.gameObject.transform.position.x)
+            {
+                rb.velocity = new Vector2(-10, rb.velocity.y);
+                isHurt = true;
+            }
+            else if (transform.position.x > collision.gameObject.transform.position.x)
+            {
+                rb.velocity = new Vector2(10, rb.velocity.y);
+                isHurt = true;
+            }
+            HealthValue -= 1;
+        }
+
+        
+    }
+
+
 }
