@@ -15,7 +15,10 @@ public class PlayerController : MonoBehaviour
     /*加入持有樱桃计数*/
     public int Cherrycount;
     public Text Cherrynum;
-    /*加入生命值计数*/
+
+
+    /*加入收集樱桃音效*/
+    public AudioSource collectionAudio;
 
     public LayerMask ground;
 
@@ -46,7 +49,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
         }
         if (fly)
-        {
+        {   
             rb.velocity = new Vector2(rb.velocity.x, flySpeed);
         }
     }
@@ -57,6 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.tag == "CherryCollection")
         {
+            collectionAudio.Play();
             Destroy(collision.gameObject);
             Cherrycount += 1;
             Cherrynum.text = Cherrycount.ToString();

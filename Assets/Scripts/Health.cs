@@ -9,6 +9,10 @@ public class Health : MonoBehaviour
     public int MaxHealthValue;
     public Text Healthnum;
 
+
+    /*加入收集爱心效果*/
+    public AudioSource collectionAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +29,7 @@ public class Health : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("HeartCollection")){
+            collectionAudio.Play();
             Destroy(collision.gameObject);
             if(HealthValue < MaxHealthValue)
             {
