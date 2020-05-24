@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
     public float flySpeed;
     public float hurtTime;
     /*加入持有樱桃计数和生命值计数*/
-    public int Cherrycount;
-    
+    public int CherryValue;
+
     public int HealthValue;
     public int MaxHealthValue;
 
@@ -35,15 +35,16 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        HealthValue = MaxHealthValue;
+
+        //HealthValue = MaxHealthValue;
         animator = GetComponent<Animator>();
-        coll = GetComponent<CircleCollider2D>();  
+        coll = GetComponent<CircleCollider2D>();
     }
 
     void FixedUpdate()
     {
-        Cherrynum.text = Cherrycount.ToString();
-        Healthnum.text = HealthValue.ToString();
+
+
         if (!animator.GetBool("is_hurt"))//受伤了停止当前运动，切换到击退效果
         {
             Movement();
@@ -51,6 +52,11 @@ public class PlayerController : MonoBehaviour
         AnimatorSet();
     }
 
+    void Update()
+    {
+        Cherrynum.text = CherryValue.ToString();
+        Healthnum.text = HealthValue.ToString();
+    }
     void Movement()
     {
         float horizontalMove = Input.GetAxis("Horizontal");
@@ -59,39 +65,33 @@ public class PlayerController : MonoBehaviour
 
         if (faceDirection != 0)
         {
-            transform.localScale = new Vector3(faceDirection,1,1);
+            transform.localScale = new Vector3(faceDirection, 1, 1);
             rb.velocity = new Vector2(horizontalMove * speed, rb.velocity.y);
         }
         if (fly)
-        {   
+        {
             rb.velocity = new Vector2(rb.velocity.x, flySpeed);
         }
     }
 
 
-    /*与樱桃碰撞触发效果*/
+    /*与樱桃和爱心碰撞触发效果*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "CherryCollection")
+        if (collision.tag == "CherryCollection")
         {
-            cherryCollectionAudio.Play();
-            Destroy(collision.gameObject);
-            Cherrycount += 1;
-           
+
+            collision.gameObject.tag = "Untagged";
+            //Destroy(collision.gameObject);
+            collision.GetComponent<Animator>().Play("isGot");
+
         }
         if (collision.CompareTag("HeartCollection"))
         {
-            heartCollectionAudio.Play();
-            Destroy(collision.gameObject);
-            if (HealthValue < MaxHealthValue)
-            {
-                HealthValue += 2;
-                if (HealthValue > MaxHealthValue)
-                {
-                    HealthValue = MaxHealthValue;
-                }
-            }
-            
+            collision.gameObject.tag = "Untagged";
+
+            //Destroy(collision.gameObject);
+            collision.GetComponent<Animator>().Play("isGot");
         }
     }
 
@@ -137,9 +137,45 @@ public class PlayerController : MonoBehaviour
             }
             HealthValue -= 1;
         }
+        if (collision.gameObject.tag == "coveredSpike")
+        {
+            if (animator.GetBool("on_floor") == false)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, flySpeed);
+                animator.SetBool("is_hurt", true);
+                animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
+            }
+            else if (transform.position.x < collision.gameObject.transform.position.x)
+            {
+                rb.velocity = new Vector2(-10, rb.velocity.y);
+                animator.SetBool("is_hurt", true);
+                animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
+            }
+            else if (transform.position.x > collision.gameObject.transform.position.x)
+            {
+                rb.velocity = new Vector2(10, rb.velocity.y);
+                animator.SetBool("is_hurt", true);
+                animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
+            }
+            HealthValue -= 1;
+        }
 
-        
     }
 
+    public void CherryCount()
+    {
+        CherryValue += 1;
+    }
 
+    public void HeartCount()
+    {
+        if (HealthValue < MaxHealthValue)
+        {
+            HealthValue += 2;
+            if (HealthValue >= MaxHealthValue)
+            {
+                HealthValue = MaxHealthValue;
+            }
+        }
+    }
 }
