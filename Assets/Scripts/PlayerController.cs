@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask ground;
 
+    public bool is_dead;//默认为未死亡
+
     Animator animator;
     Collider2D coll;
 
@@ -43,13 +45,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-
-
         if (!animator.GetBool("is_hurt"))//受伤了停止当前运动，切换到击退效果
         {
             Movement();
         }
         AnimatorSet();
+        SetDeath();
     }
 
     void Update()
@@ -136,6 +137,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
             }
             HealthValue -= 1;
+            
         }
         if (collision.gameObject.tag == "coveredSpike")
         {
@@ -158,6 +160,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
             }
             HealthValue -= 1;
+            
         }
 
     }
@@ -177,5 +180,15 @@ public class PlayerController : MonoBehaviour
                 HealthValue = MaxHealthValue;
             }
         }
+    }
+
+    public void SetDeath()
+    {   
+        if(HealthValue <= 0)
+        {
+            is_dead = true;
+            GameManager.GameOver(is_dead);
+        }
+        
     }
 }

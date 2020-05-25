@@ -77,7 +77,9 @@
     <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\PlayerMovePhysics.cs" />
     <Compile Include="Assets\Scripts\AnimationBackground.cs" />
     <Compile Include="Assets\Scripts\CollimationController.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
+    <Compile Include="Assets\Scripts\House.cs" />
     <Compile Include="Assets\Scripts\Hunt.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\cherry.cs" />
