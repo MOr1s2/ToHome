@@ -33425,8 +33425,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e11f381b1f67d1a418eb71143ba95728, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.1
+  m_Pitch: 1.99
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -33521,7 +33521,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5ebdfadd4f446e1419f8add82d413cba, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -33618,7 +33618,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 929da8a9b424f9e46b17eaf9ac300bf7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.6
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -33716,7 +33716,8 @@ MonoBehaviour:
   collimation: {fileID: 1758372283}
   player: {fileID: 1658731043}
   playerAnim: {fileID: 1268100318}
-  shootInterval: 10
+  firstShootTime: 20
+  shootInterval: 15
   aimmingTime: 4
   bulletFlyTime: 0.15
   reloading: {fileID: 1049527548}
@@ -77126,6 +77127,7 @@ GameObject:
   - component: {fileID: 1758372285}
   - component: {fileID: 1758372284}
   - component: {fileID: 1758372287}
+  - component: {fileID: 1758372288}
   m_Layer: 0
   m_Name: Collimation
   m_TagString: Untagged
@@ -77229,6 +77231,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!95 &1758372288
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758372283}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 203280e6579ef224e927c871bf15f9f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1821742656
 GameObject:
   m_ObjectHideFlags: 0
