@@ -30635,7 +30635,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5F88\u4E0D\u5E78\uFF0C\u4F60\u88AB\u730E\u4EBA\u6740\u5BB3\u4E86\u3002\u3002\u3002"
+  m_Text: "\u4F60\u6B7B\u4E8E\u730E\u4EBA\u624B\u4E2D\uFF0C\n\u4F60\u7684\u5B69\u5B50\u4E5F\u56E0\u6B64\u997F\u6B7B\u3002"
 --- !u!222 &857629919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32475,7 +32475,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4F60\u5E78\u8FD0\u5730\u4E3A\u4F60\u548C\u4F60\u7684\u5B69\u5B50\u627E\u5230\u4E86\u5145\u8DB3\u7684\u98DF\u7269\uFF0C\u4F46\u662F\u730E\u4EBA\u4ECD\u7136\u5728\u6697\u5904\u7B49\u5F85\u7740\u4F60\u7684\u51FA\u73B0......"
+  m_Text: "\u4F60\u7EC8\u4E8E\u6536\u96C6\u5230\u4E86\u8DB3\u591F\u7684\u98DF\u7269\uFF0C\n\u4E3A\u79CD\u65CF\u8D62\u5F97\u4E86\u5B58\u7EED\u7684\u53EF\u80FD\uFF0C\n\u4F46\u662F\u730E\u4EBA\u4ECD\u7136\u5728\u6697\u5904\u7B49\u5F85\u7740\u4F60\u7684\u51FA\u73B0......"
 --- !u!222 &987724760
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34705,7 +34705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8FD9\u91CC\u662F\u4F60\u7684\u5BB6\uFF0C\n\u4F46\u662F\u4F60\u8FD8\u6CA1\u6709\u4E3A\u4F60\u7684\u5B69\u5B50\u6536\u96C6\u8DB3\u591F\u7684\u98DF\u7269\uFF0C\n\u8BF7\u6536\u96C6\u5C3D\u53EF\u80FD\u591A\u7684\u98DF\u7269\u518D\u8FD4\u56DE\uFF01"
+  m_Text: "\u6B22\u8FCE\u56DE\u5BB6\uFF0C\u4F46\u662F\u4E3A\u4E86\u79CD\u65CF\u7684\u5EF6\u7EED\uFF0C\n\u8BF7\u6536\u96C6\u5C3D\u53EF\u80FD\u591A\u7684\u98DF\u7269\u518D\u8FD4\u56DE\uFF01"
 --- !u!222 &1149466623
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37821,7 +37821,7 @@ PrefabInstance:
     - target: {fileID: 4402410631502197849, guid: 0903276a69f7fda4586a22c5cc932720,
         type: 3}
       propertyPath: hurtTime
-      value: 0.75
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4402410631502197849, guid: 0903276a69f7fda4586a22c5cc932720,
         type: 3}
@@ -61753,7 +61753,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4F60\u4FA5\u5E78\u9003\u8131\u4E86\u730E\u4EBA\u7684\u8FFD\u6355\uFF0C\u5E26\u7740\u4E3A\u6570\u4E0D\u591A\u7684\u98DF\u7269\u56DE\u5230\u4E86\u5BB6\uFF0C\u5374\u53D1\u73B0\u81EA\u5DF1\u7684\u5B69\u5B50\u65E9\u5DF2\u88AB\u730E\u4EBA\u63B3\u53BB\u3002\u3002\u3002\u3002"
+  m_Text: "\u4F60\u4FA5\u5E78\u9003\u8131\u4E86\u730E\u4EBA\u7684\u8FFD\u6355\uFF0C\n\u5E26\u7740\u4E3A\u6570\u4E0D\u591A\u7684\u98DF\u7269\u56DE\u5230\u4E86\u5BB6\uFF0C\n\u5374\u53D1\u73B0\u81EA\u5DF1\u7684\u5B69\u5B50\u65E9\u5DF2\u88AB\u730E\u4EBA\u63B3\u53BB\u3002"
 --- !u!222 &1534424778
 CanvasRenderer:
   m_ObjectHideFlags: 0
