@@ -32,4 +32,9 @@ public class CollimationController : MonoBehaviour
             lastAimTime = Time.timeSinceLevelLoad;
         }
     }
+
+    private void Disable() {
+        gameObject.SetActive(false);
+        fixedCollimation = false;
+    }
 }
