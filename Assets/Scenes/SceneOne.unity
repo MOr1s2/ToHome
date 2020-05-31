@@ -19809,7 +19809,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CherryValue: 0
   curShader: {fileID: 4800000, guid: 825f648bd3ebded4297ed9c53ba55d08, type: 3}
+  grayScaleAmountAim: 1
   grayScaleAmount: 1
+  speed: 0.0004
 --- !u!1 &526114102
 GameObject:
   m_ObjectHideFlags: 0
