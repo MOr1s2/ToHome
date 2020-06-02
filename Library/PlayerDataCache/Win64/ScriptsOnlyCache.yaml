@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AnimationBackground
     - CollimationController
+    - EnterHouse
     - GameManager
     - Heart
     - House
@@ -77,23 +78,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11188}
+      Script: {instanceID: 11198}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 11354}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11906}
+      Script: {instanceID: 11916}
     - Class: 114
-      Script: {instanceID: 12138}
+      Script: {instanceID: 12148}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 13038}
+      Script: {instanceID: 13048}
     - Class: 114
-      Script: {instanceID: 13498}
+      Script: {instanceID: 13508}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -136,31 +137,31 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11188}
+      Script: {instanceID: 11198}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11906}
+      Script: {instanceID: 11916}
     - Class: 114
-      Script: {instanceID: 11942}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 12688}
+      Script: {instanceID: 12698}
     - Class: 114
-      Script: {instanceID: 12704}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 13038}
+      Script: {instanceID: 13048}
     - Class: 114
-      Script: {instanceID: 13246}
+      Script: {instanceID: 13256}
     - Class: 114
-      Script: {instanceID: 13372}
+      Script: {instanceID: 13382}
     - Class: 114
-      Script: {instanceID: 13498}
+      Script: {instanceID: 13508}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -225,49 +226,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 596}
     - Class: 114
-      Script: {instanceID: 11188}
+      Script: {instanceID: 11198}
     - Class: 114
-      Script: {instanceID: 11248}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 11380}
+      Script: {instanceID: 11390}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 11398}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11450}
     - Class: 114
-      Script: {instanceID: 11614}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 11906}
+      Script: {instanceID: 11916}
     - Class: 114
-      Script: {instanceID: 11962}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 12282}
+      Script: {instanceID: 12292}
     - Class: 114
-      Script: {instanceID: 12388}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 12706}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 12772}
+      Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 13038}
+      Script: {instanceID: 12782}
     - Class: 114
-      Script: {instanceID: 13236}
+      Script: {instanceID: 13048}
     - Class: 114
-      Script: {instanceID: 13330}
+      Script: {instanceID: 13246}
     - Class: 114
-      Script: {instanceID: 13358}
+      Script: {instanceID: 13340}
     - Class: 114
-      Script: {instanceID: 13454}
+      Script: {instanceID: 13368}
     - Class: 114
-      Script: {instanceID: 13466}
+      Script: {instanceID: 13464}
     - Class: 114
-      Script: {instanceID: 13470}
+      Script: {instanceID: 13476}
     - Class: 114
-      Script: {instanceID: 13494}
+      Script: {instanceID: 13480}
     - Class: 114
-      Script: {instanceID: 13498}
+      Script: {instanceID: 13504}
+    - Class: 114
+      Script: {instanceID: 13508}
+    - Class: 114
+      Script: {instanceID: 91314}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -735,7 +740,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: add9c46a6affdd091874e329d9116990
+      Hash: 596122b7df85762f29c6e5914dcd808b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
@@ -753,7 +758,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: c8f1ad5ea45c88cdd00f027096bb0693
+      Hash: efb901cfbcb8e377c42218bd1be07213
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1125,7 +1130,7 @@ ScriptsOnlyBuild:
     className: CollimationController
   - hash:
       serializedVersion: 2
-      Hash: 2f8c7275c9015120030c580af897a956
+      Hash: 390eadf0049c0eeecb42001b1a51dfc6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1227,7 +1232,7 @@ ScriptsOnlyBuild:
     className: CinemachineBrain
   - hash:
       serializedVersion: 2
-      Hash: 667324ce55e63d98fb0bc5a7819f237b
+      Hash: 32c4f88565ab4b4f4a56edd0827c0c1a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: House
@@ -1309,6 +1314,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 67c5e21d91fad02dd5897e1a5324b12a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnterHouse
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

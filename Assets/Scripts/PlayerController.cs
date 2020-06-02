@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Diagnostics.Tracing;
 using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
@@ -31,6 +32,9 @@ public class PlayerController : MonoBehaviour
     public LayerMask ground;
 
     public bool is_dead;//默认为未死亡
+    public bool is_target;//判断是否收集够物品
+    public int dialogcount;//判断出发收集对话框出现的次数
+    
 
     Animator animator;
     Collider2D coll;
@@ -51,6 +55,7 @@ public class PlayerController : MonoBehaviour
         }
         AnimatorSet();
         SetDeath();
+        
     }
 
     void Update()
@@ -168,6 +173,12 @@ public class PlayerController : MonoBehaviour
     public void CherryCount()
     {
         CherryValue += 1;
+        if(CherryValue == 4 && dialogcount == 0)
+        {
+            GameManager.reachtarget(true);
+            speed += 2;
+            dialogcount++;
+        }
     }
 
     public void HeartCount()
@@ -191,4 +202,11 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+    public void ReachtargetUI()
+    {
+        
+    }
+
+
 }

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;//死亡结局
     public GameObject goodendingUI;//好结局
     public GameObject badEndingUI;//坏结局
+    public GameObject reachtargetUI;//收集4个浆果弹出对话框
    
 
    private void Awake()
@@ -65,5 +66,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    public static  void reachtarget(bool is_target)
+    {
+        if (is_target)
+        {
+            instance.reachtargetUI.SetActive(true);
+            Destroy(instance.reachtargetUI, 4f);
+        }
+           
+    }
 }
