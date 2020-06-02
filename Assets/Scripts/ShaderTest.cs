@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using System.Diagnostics;
+
 [ExecuteInEditMode]
 public class ShaderTest : MonoBehaviour
 {
@@ -7,7 +10,9 @@ public class ShaderTest : MonoBehaviour
 
 	#region Variables
 	public Shader curShader;
+	public float grayScaleAmountAim;
 	public float grayScaleAmount = 1.0f;
+	public float speed;
 	private Material curMaterial;
 	#endregion
 
@@ -61,9 +66,17 @@ public class ShaderTest : MonoBehaviour
 	{
 		grayScaleAmount = Mathf.Clamp(grayScaleAmount, 0.0f, 1.0f);
 		CherryValue = GameObject.Find("Player").GetComponent<PlayerController>().CherryValue;
+		CherryValue = CherryValue < 5 ? CherryValue : 5;
 
-		grayScaleAmount = 1.0f - CherryValue / 6.0f;
+		grayScaleAmountAim = 1.0f - CherryValue / 5.0f;
 
+		grayScaleAmount = (float)System.Math.Round(grayScaleAmount, 5);
+		grayScaleAmountAim = (float)System.Math.Round(grayScaleAmountAim, 5);
+
+		if (grayScaleAmount != grayScaleAmountAim)
+        {
+			grayScaleAmount -= speed;
+        }
 	}
 
 	void OnDisable()

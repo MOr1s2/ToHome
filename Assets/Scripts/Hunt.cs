@@ -9,6 +9,7 @@ public class Hunt : MonoBehaviour
     CollimationController collimationControl;
     PlayerController playerControl;
     public Animator playerAnim;
+    public float firstShootTime;
     public float shootInterval;
     public float aimmingTime;
     public float bulletFlyTime;
@@ -24,7 +25,7 @@ public class Hunt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastShootTime = -5.0f;
+        lastShootTime = firstShootTime - shootInterval;
         isAimming = false;
         isShooting = false;
         collimationControl = collimation.GetComponent<CollimationController>();
@@ -61,13 +62,14 @@ public class Hunt : MonoBehaviour
                 playerAnim.SetBool("is_hurt", true);
                 playerAnim.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
                 playerControl.HealthValue -= 1;
+                collimation.GetComponent<Animator>().Play("hit");
             }
             else
             {
                 bulletMiss.Play();
+                collimation.SetActive(false);
+                collimationControl.fixedCollimation = false;
             }
-            collimation.SetActive(false);
-            collimationControl.fixedCollimation = false;
         }
     }
 }
