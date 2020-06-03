@@ -74,9 +74,9 @@ public class ShaderTest : MonoBehaviour
 		grayScaleAmountAim = (float)System.Math.Round(grayScaleAmountAim, 5);
 
 		if (grayScaleAmount != grayScaleAmountAim)
-        {
+		{
 			grayScaleAmount -= speed;
-        }
+		}
 	}
 
 	void OnDisable()
