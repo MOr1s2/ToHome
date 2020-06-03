@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public bool is_dead;//默认为未死亡
     public bool is_target;//判断是否收集够物品
     public int dialogcount;//判断出发收集对话框出现的次数
+    public GameObject hunter;
     
 
     Animator animator;
@@ -177,6 +178,7 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.reachtarget(true);
             speed += 2;
+            hunter.GetComponent<Hunt>().shootInterval -= 10;
             dialogcount++;
         }
     }

@@ -2297,7 +2297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136017530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -201.02, y: -281.33, z: 85.246414}
+  m_LocalPosition: {x: -268.8, y: -293.7, z: 85.246414}
   m_LocalScale: {x: 1.17097, y: 1.17097, z: 1.17097}
   m_Children: []
   m_Father: {fileID: 448653700}
@@ -4061,7 +4061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280843757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -119.2, y: -290.4, z: 85.246414}
+  m_LocalPosition: {x: -65.3, y: -289.1, z: 85.246414}
   m_LocalScale: {x: 1.17097, y: 1.17097, z: 1.17097}
   m_Children: []
   m_Father: {fileID: 448653700}
@@ -33043,7 +33043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838551254}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -269.47, y: -293.5, z: 85.246414}
+  m_LocalPosition: {x: -136.3, y: -291.1, z: 85.246414}
   m_LocalScale: {x: 1.17097, y: 1.17097, z: 1.17097}
   m_Children: []
   m_Father: {fileID: 448653700}
@@ -41068,6 +41068,11 @@ PrefabInstance:
       propertyPath: PauseUI
       value: 
       objectReference: {fileID: 1533105783}
+    - target: {fileID: 4402410631502197849, guid: 0903276a69f7fda4586a22c5cc932720,
+        type: 3}
+      propertyPath: hunter
+      value: 
+      objectReference: {fileID: 1049527545}
     - target: {fileID: 4402410631502197851, guid: 0903276a69f7fda4586a22c5cc932720,
         type: 3}
       propertyPath: m_Material
@@ -42421,7 +42426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398105591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -153.491, y: -273.511, z: 85.246414}
+  m_LocalPosition: {x: -200.82, y: -281.53, z: 85.246414}
   m_LocalScale: {x: 1.17097, y: 1.17097, z: 1.17097}
   m_Children: []
   m_Father: {fileID: 448653700}
@@ -81355,7 +81360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1758372284
 MonoBehaviour:
   m_ObjectHideFlags: 0
