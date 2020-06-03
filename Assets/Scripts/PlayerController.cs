@@ -63,7 +63,9 @@ public class PlayerController : MonoBehaviour
     {
         Cherrynum.text = CherryValue.ToString();
         Healthnum.text = HealthValue.ToString();
+        animator.SetInteger("health", HealthValue);
     }
+    
     void Movement()
     {
         float horizontalMove = Input.GetAxis("Horizontal");
