@@ -120,9 +120,9 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("is_hurt", false);
         }
-    }
+    }//动画设置
 
-    public void OnCollisionEnter2D(Collision2D collision)//与陷阱碰撞触发效果
+    public void OnCollisionEnter2D(Collision2D collision)//与陷阱和敌人碰撞触发效果
     {
         if (collision.gameObject.tag == "spike")
         {
@@ -170,8 +170,32 @@ public class PlayerController : MonoBehaviour
             HealthValue -= 1;
             
         }
+        if(collision.gameObject.tag == "enemy")
+        {
+            if (animator.GetBool("on_floor") == false)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, flySpeed);
+                animator.SetBool("is_hurt", true);
+                animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
+            }
+            else if (transform.position.x < collision.gameObject.transform.position.x)
+            {
+                rb.velocity = new Vector2(-10, rb.velocity.y);
+                animator.SetBool("is_hurt", true);
+                animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
+            }
+            else if (transform.position.x > collision.gameObject.transform.position.x)
+            {
+                rb.velocity = new Vector2(10, rb.velocity.y);
+                animator.SetBool("is_hurt", true);
+                animator.SetFloat("lastHurtTime", Time.timeSinceLevelLoad);
+            }
+            HealthValue -= 1;
+        }
 
     }
+
+ 
 
     public void CherryCount()
     {
