@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\coverTrap.cs" />
     <Compile Include="Assets\Scripts\eagle_controll.cs" />
     <Compile Include="Assets\Scripts\snake_move.cs" />
+    <Compile Include="Assets\Scripts\trap_black.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
