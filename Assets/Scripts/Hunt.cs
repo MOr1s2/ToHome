@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hunt : MonoBehaviour
 {
+    
     public GameObject collimation;
     public GameObject player;
     CollimationController collimationControl;

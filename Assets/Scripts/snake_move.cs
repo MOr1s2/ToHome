@@ -42,7 +42,7 @@ public class snake_move : MonoBehaviour
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             if (transform.position.x < left_x_value)
             {
-                transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
+                transform.localScale = new Vector3(-0.15f, 0.15f, 0.15f);
                 
             }
         }
@@ -51,7 +51,7 @@ public class snake_move : MonoBehaviour
             rb.velocity = new Vector2(speed, rb.velocity.y);
             if (transform.position.x > right_x_value)
             {
-                transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
                 
             }
         }

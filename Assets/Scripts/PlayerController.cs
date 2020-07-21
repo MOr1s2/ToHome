@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public GameObject player;
 
     public float speed;
     public float flySpeed;
@@ -50,13 +51,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!animator.GetBool("is_hurt"))//受伤了停止当前运动，切换到击退效果
+        if (!animator.GetBool("is_hurt")&&!is_dead)//受伤了停止当前运动，切换到击退效果
         {
             Movement();
         }
         AnimatorSet();
         SetDeath();
-        
     }
 
     void Update()
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     /*与樱桃和爱心碰撞触发效果*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "CherryCollection")
+        if (collision.tag == "CherryCollection" )
         {
 
             collision.gameObject.tag = "Untagged";
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
             collision.GetComponent<Animator>().Play("isGot");
 
         }
-        if (collision.CompareTag("HeartCollection"))
+        if (collision.CompareTag("HeartCollection") )
         {
             collision.gameObject.tag = "Untagged";
 
@@ -111,6 +111,10 @@ public class PlayerController : MonoBehaviour
         if (coll.IsTouchingLayers(ground))
         {
             animator.SetBool("on_floor", true);
+            if(is_dead == true)
+            {
+                Dead();
+            }
         }
         else
         {
@@ -124,7 +128,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)//与陷阱和敌人碰撞触发效果
     {
-        if (collision.gameObject.tag == "spike")
+        if (collision.gameObject.tag == "spike" && is_dead == false)//当角色未死亡时触碰才会触发效果
         {
             if (animator.GetBool("on_floor") == false)
             {
@@ -147,7 +151,7 @@ public class PlayerController : MonoBehaviour
             HealthValue -= 1;
             
         }
-        if (collision.gameObject.tag == "coveredSpike")
+        if (collision.gameObject.tag == "coveredSpike" && is_dead == false)
         {
             if (animator.GetBool("on_floor") == false)
             {
@@ -170,7 +174,7 @@ public class PlayerController : MonoBehaviour
             HealthValue -= 1;
             
         }
-        if(collision.gameObject.tag == "enemy")
+        if(collision.gameObject.tag == "enemy"&&is_dead == false)
         {
             if (animator.GetBool("on_floor") == false)
             {
@@ -226,14 +230,16 @@ public class PlayerController : MonoBehaviour
         if(HealthValue <= 0)
         {
             is_dead = true;
-            GameManager.GameOver(is_dead);
+            player.tag = "Untagged";
+            animator.SetBool("die", true);
+            
         }
         
     }
 
-    public void ReachtargetUI()
+    public void Dead()
     {
-        
+        GameManager.GameOver(is_dead);
     }
 
 
