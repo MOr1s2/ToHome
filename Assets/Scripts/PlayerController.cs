@@ -34,9 +34,12 @@ public class PlayerController : MonoBehaviour
 
     public bool is_dead;//默认为未死亡
     public bool is_target;//判断是否收集够物品
+    public bool has_tomb;//判断是否变成坟墓
     public int dialogcount;//判断出发收集对话框出现的次数
     public GameObject hunter;
-    
+    public PhysicsMaterial2D None_friction_material;
+
+
 
     Animator animator;
     Collider2D coll;
@@ -111,7 +114,7 @@ public class PlayerController : MonoBehaviour
         if (coll.IsTouchingLayers(ground))
         {
             animator.SetBool("on_floor", true);
-            if(is_dead == true)
+            if(is_dead == true&&has_tomb == true)
             {
                 Dead();
             }
@@ -242,5 +245,9 @@ public class PlayerController : MonoBehaviour
         GameManager.GameOver(is_dead);
     }
 
-
+    public void BecomeTomb()
+    {
+        has_tomb = true;
+        player.GetComponent<CircleCollider2D>().sharedMaterial = None_friction_material;
+    }
 }
