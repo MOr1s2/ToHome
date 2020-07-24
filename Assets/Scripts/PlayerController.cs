@@ -212,7 +212,7 @@ public class PlayerController : MonoBehaviour
     public void CherryCount()
     {
         CherryValue += 1;
-        if(CherryValue == 4 && dialogcount == 0)
+        if(CherryValue == 5 && dialogcount == 0)
         {
             GameManager.reachtarget(true);
             speed += 2;

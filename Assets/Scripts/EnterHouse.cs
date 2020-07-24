@@ -13,11 +13,11 @@ public class EnterHouse : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             finishUI.SetActive(false);
-            if (player.GetComponent<PlayerController>().CherryValue >= 4)
+            if (player.GetComponent<PlayerController>().CherryValue >= 5)
             {
                 GameManager.GoodEnding(true);
             }
-            if (player.GetComponent<PlayerController>().CherryValue < 4 && player.GetComponent<PlayerController>().CherryValue >= 1)
+            if (player.GetComponent<PlayerController>().CherryValue < 5 && player.GetComponent<PlayerController>().CherryValue >= 1)
             {
                 GameManager.BadEnding(true);
             }
