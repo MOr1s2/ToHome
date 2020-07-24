@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
 
     public LayerMask ground;
+    
 
     public bool is_dead;//默认为未死亡
     public bool is_target;//判断是否收集够物品
@@ -154,7 +155,11 @@ public class PlayerController : MonoBehaviour
             HealthValue -= 1;
             
         }
-        if (collision.gameObject.tag == "coveredSpike" && is_dead == false)
+        if(collision.gameObject.tag == "spike" && is_dead == true&&has_tomb == true)//当角色变成墓碑时
+        {
+            Dead();
+        }
+            if (collision.gameObject.tag == "coveredSpike" && is_dead == false)
         {
             if (animator.GetBool("on_floor") == false)
             {
@@ -250,4 +255,6 @@ public class PlayerController : MonoBehaviour
         has_tomb = true;
         player.GetComponent<CircleCollider2D>().sharedMaterial = None_friction_material;
     }
+
+ 
 }

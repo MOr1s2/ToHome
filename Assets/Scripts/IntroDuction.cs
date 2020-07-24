@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class IntroDuction : MonoBehaviour
 {
+    public Animator crossfade;
     public void ReturnMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex - 1));
+    }
+    IEnumerator LoadScene(int SceneIndex)
+    {
+        crossfade.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneIndex);
     }
 }

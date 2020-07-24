@@ -76,6 +76,7 @@
     <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\PlayerMoveOnSphere.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.5.0\Cinemachine Example Scenes\Shared\Scripts\PlayerMovePhysics.cs" />
     <Compile Include="Assets\Scripts\AnimationBackground.cs" />
+    <Compile Include="Assets\Scripts\BadEnding_animation.cs" />
     <Compile Include="Assets\Scripts\CollimationController.cs" />
     <Compile Include="Assets\Scripts\EnterHouse.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -87,9 +88,11 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SentenceSpawner.cs" />
     <Compile Include="Assets\Scripts\ShaderTest.cs" />
+    <Compile Include="Assets\Scripts\StartCG_controll.cs" />
     <Compile Include="Assets\Scripts\cherry.cs" />
     <Compile Include="Assets\Scripts\coverTrap.cs" />
     <Compile Include="Assets\Scripts\eagle_controll.cs" />
+    <Compile Include="Assets\Scripts\goodendingUI_controll.cs" />
     <Compile Include="Assets\Scripts\snake_move.cs" />
     <Compile Include="Assets\Scripts\trap_black.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

@@ -11,7 +11,11 @@ public class GameManager : MonoBehaviour
     public GameObject goodendingUI;//好结局
     public GameObject badEndingUI;//坏结局
     public GameObject reachtargetUI;//收集4个浆果弹出对话框
-   
+    public bool gameoverUI_isover;
+    public bool goodendingUI_isover;
+    public bool badendingUI_isover;
+    public Animator Crossfade;
+
 
    private void Awake()
     {
@@ -23,16 +27,18 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        Time_shutdown();
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //StartCoroutine(ReLoad_Scene(SceneManager.GetActiveScene().buildIndex));此时协程会有bug，故删除
         Time.timeScale = 1;
     }
+
 
     public void QuitGame()
     {
@@ -44,16 +50,27 @@ public class GameManager : MonoBehaviour
         if (is_dead)
         {
             instance.gameOverUI.SetActive(true);
-            Time.timeScale = 0f;
+            
+            /*if (instance.gameoverUI_isover == true)
+            {
+                Time.timeScale = 0f;
+            }*/
+
+
         }
     }
+
 
     public static void GoodEnding(bool is_GoodEnding)
     {
         if (is_GoodEnding)
         {
             instance.goodendingUI.SetActive(true);
-            Time.timeScale = 0f;
+            /*if (instance.goodendingUI_isover == true)
+            {
+                Time.timeScale = 0f;
+            }*/
+            
         }
     }
 
@@ -62,7 +79,7 @@ public class GameManager : MonoBehaviour
         if (is_BadEnding)
         {
             instance.badEndingUI.SetActive(true);
-            Time.timeScale = 0f;
+
         }
     }
 
@@ -75,6 +92,13 @@ public class GameManager : MonoBehaviour
         }
            
     }
-
+    public void Time_shutdown()
+    {
+        if (gameoverUI_isover || goodendingUI_isover || badendingUI_isover)
+        {
+            Time.timeScale = 0;
+        }
+        
+    }
 
 }

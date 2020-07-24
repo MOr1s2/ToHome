@@ -7,16 +7,22 @@ public class Menu : MonoBehaviour
 {
     public GameObject GuidUI;
     public GameObject PauseUI;
+    public Animator crossfade;
 
 
     public void Update()
     {
         PauseGame();
     }
-
+    IEnumerator LoadScene(int SceneIndex)
+    {
+        crossfade.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneIndex);
+    }
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 2));
     }
 
   public void QuitGame()
@@ -27,7 +33,7 @@ public class Menu : MonoBehaviour
 
     public void ToIntroduction()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     

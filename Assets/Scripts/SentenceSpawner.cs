@@ -6,6 +6,7 @@ public class SentenceSpawner : MonoBehaviour
 {
     public List<GameObject> Sentencelist = new List<GameObject>();
     public int index;
+    public GameObject gamemanager;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,10 @@ public class SentenceSpawner : MonoBehaviour
     {
         index = Random.Range(0, Sentencelist.Count);
         Sentencelist[index].SetActive(true);
+    }
+
+    public void gameover_Animation_isover()
+    {
+        gamemanager.GetComponent<GameManager>().gameoverUI_isover = true;
     }
 }
