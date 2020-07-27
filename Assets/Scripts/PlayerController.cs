@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     /*加入收集樱桃音效*/
     public AudioSource cherryCollectionAudio;
     public AudioSource heartCollectionAudio;
+    public AudioSource wavingWingsAudio;
+    public AudioSource hurtAudio;
 
     /*UI显示樱桃数和生命值文本*/
     public Text Healthnum;
@@ -256,5 +258,14 @@ public class PlayerController : MonoBehaviour
         player.GetComponent<CircleCollider2D>().sharedMaterial = None_friction_material;
     }
 
+    public void PlayWingsAudio()
+    {
+        wavingWingsAudio.Play();
+    }
+
+    public void PlayHurtAudio()
+    {
+        hurtAudio.Play();
+    }
  
 }
